@@ -1,0 +1,31 @@
+/*
+   Fichier _app.scss
+
+   Ce fichier est généralement utilisé pour les styles spécifiques à l'application ou aux fonctionnalités
+   qui sont indépendantes du reste du site web.
+   Vous pouvez y inclure des styles pour des composants spécifiques à l'application ou pour des fonctionnalités
+   qui ne sont pas liées à l'interface utilisateur générale du site.
+   Cela permet de garder les styles modulaires et bien organisés.
+*/
+#app {
+   display: grid;
+   grid-template-rows: auto auto 1fr auto;
+   grid-template-areas: "header" "nav" "main" "footer";
+   min-height: 100%;
+   > header {
+      grid-area: header;
+      background-color: hsl(var(--hue), var(--sat), var(--lum));
+      color: white;
+   }
+   > nav {
+      grid-area: nav;
+      background-color: hsl(var(--hue), var(--sat), calc(var(--lum) * .5));
+      color: white;
+   }
+   > main {
+      grid-area: main;
+      background-color: hsl(var(--hue), var(--sat), calc(var(--lum) * .75));
+      color: white;
+   }
+   
+}

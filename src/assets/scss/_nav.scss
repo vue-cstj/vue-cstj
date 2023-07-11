@@ -1,0 +1,22 @@
+/*
+   Fichier _nav.scss
+
+   Ce fichier contient les styles spécifiques à la navigation du site web, y compris les menus, les barres de navigation, les liens de navigation, etc.
+*/
+nav {
+	ul {
+		display: flex;
+		list-style-type: none;
+		li {
+			a {
+				display: flex;
+				padding: .5em 1em;
+				text-decoration: none;
+				&:hover {
+					color: hsl(calc(var(--hue) - 140), 100%, 50%);
+					background-color: hsl(var(--hue), var(--sat), 30%);
+				}
+			}
+		}
+	}
+}
